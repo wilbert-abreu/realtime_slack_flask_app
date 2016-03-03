@@ -7,7 +7,7 @@ manager = Manager(app)
 
 def run():
     port = int(os.environ.get('PORT', 8080))
-    ip = int(os.environ.get('IP', '0.0.0.0'))
+    ip = os.environ.get('IP', '0.0.0.0')
     app.run(host=ip, port=port)
 
 
