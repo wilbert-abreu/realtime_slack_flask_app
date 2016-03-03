@@ -7,12 +7,12 @@ from pusher import Pusher
 from . import decorators
 import datetime
 import json
-
+import os
 
 pusher = Pusher(
-  app_id='173573',
-  key='b568462b35424532aa89',
-  secret='37566de4aecc1f1b312c'
+  app_id=os.environ['PUSHERAPPID'],
+  key=os.environ['PUSHERKEY'],
+  secret=os.environ['PUSHERSECRET']
 )
 
 
