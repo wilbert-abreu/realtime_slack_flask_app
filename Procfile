@@ -1,1 +1,1 @@
-web: gunicorn -b 0.0.0.0:$PORT slack_clone:app
+web: gunicorn slack_clone:app --log-file=-
