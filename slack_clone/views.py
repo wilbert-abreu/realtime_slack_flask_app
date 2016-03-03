@@ -1,6 +1,6 @@
 from flask import render_template, flash, request, Response, redirect, url_for
 from slack_clone import app
-from .models import session, User, File, Channel, Message
+from .models import session, User, Channel, Message
 from flask_login import login_required, current_user, login_user, logout_user
 from werkzeug.security import check_password_hash, generate_password_hash
 from pusher import Pusher
