@@ -23,15 +23,15 @@ class User(Base, UserMixin):
     files_uploaded = relationship("File", backref="file")
 
 
-class File(Base):
-    __tablename__ = "file"
-
-    id = Column(Integer, primary_key=True)
-    filename = Column(String(128))
-    upload_date = Column(DateTime, default=datetime.datetime.utcnow)
-    user_id = Column(Integer, ForeignKey('user.id'))
-    channel_id = Column(Integer, ForeignKey('channel.id'))
-    caption = Column(Text(1024))
+# class File(Base):
+#     __tablename__ = "file"
+#
+#     id = Column(Integer, primary_key=True)
+#     filename = Column(String(128))
+#     upload_date = Column(DateTime, default=datetime.datetime.utcnow)
+#     user_id = Column(Integer, ForeignKey('user.id'))
+#     channel_id = Column(Integer, ForeignKey('channel.id'))
+#     caption = Column(Text(1024))
 
 
 class Channel(Base):
