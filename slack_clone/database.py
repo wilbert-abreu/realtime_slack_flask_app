@@ -4,7 +4,7 @@ from sqlalchemy.ext.declarative import declarative_base
 
 from slack_clone import app
 
-engine = create_engine(app.config["DATABASE_URI"])
+engine = create_engine(app.config["DATABASE_URL"])
 Base = declarative_base()
 Session = sessionmaker(bind=engine)
 session = Session()

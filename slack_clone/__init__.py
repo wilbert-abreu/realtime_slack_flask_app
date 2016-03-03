@@ -3,8 +3,8 @@ from flask_heroku import Heroku
 
 app = Flask(__name__)
 # config_path = os.environ.get("CONFIG_PATH",
-#                              "slack_clone.config.DevelopmentConfig")
-# app.config.from_object(config_path)
+#                               "slack_clone.config.DevelopmentConfig")
+#  app.config.from_object(config_path)
 heroku = Heroku(app)
 
 from . import views
